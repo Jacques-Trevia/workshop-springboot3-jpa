@@ -5,6 +5,7 @@ import java.util.Objects;
 
 import com.educandoweb.course.entities.Order;
 import com.educandoweb.course.entities.Product;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import jakarta.persistence.Embeddable;
 import jakarta.persistence.JoinColumn;
@@ -38,7 +39,7 @@ public class OrderItemPK implements Serializable {
 	public void setProduct(Product product) {
 		this.product = product;
 	}
-
+	
 	@Override
 	public int hashCode() {
 		return Objects.hash(order, product);
